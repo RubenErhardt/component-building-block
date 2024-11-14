@@ -1,5 +1,6 @@
 <script>
-    import Donationbtn from '$lib/Donationbtn.svelte';
+import Donatiebtn from '$lib/Donatiebtn.svelte';
 </script>
 
-<Donationbtn/>
+<Donatiebtn/>
+
