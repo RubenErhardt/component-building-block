@@ -1,5 +1,5 @@
 <button popovertarget="donation" popovertargetaction="show" class="donation-button">
-    <img src="./4128927.png" alt="Doneren" class="button-icon">Doneren
+    <img src="./4128927.png" alt="donation button" class="button-icon">Doneren
 </button>
 
 <div popover="auto" id="donation" class="popup">
@@ -61,7 +61,7 @@
 
     .donation-button {
         all: unset;
-        --btn-color: #E85340;
+        --btn-color: #8a0000;
         --btn-text: #ffffff;
         background-color: var(--btn-color);
         border-radius: 2px;
@@ -81,6 +81,7 @@
     .button-icon {
         width: 20px;
         height: auto;
+        filter: invert(1) grayscale(1) brightness(100%);
         margin-right: 8px;
     }
 
@@ -138,4 +139,200 @@
     .close-button:hover {
         color: #E85340;
     }
+
+   /* Mediaquery voor schermen kleiner dan 560px */
+@media (max-width: 560px) {
+    /* Popup aanpassen voor kleinere schermen */
+    .popup {
+        width: 400px;
+        height: 220px;
+    }
+
+    h2{
+        margin-top: -10px;
+    }
+
+    /* Verkleinen van de radio-opties */
+    .amount-options {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .amount-options label {
+        font-size: 14px; /* Kleinere tekst voor de labels */
+        padding: 6px 12px; /* Kleinere padding voor de labels */
+    }
+
+    /* 'Ander bedrag' invoerveld aanpassen */
+    .other {
+        width: 91%; /* Volledige breedte van de popup */
+        height: 20px;
+    }
+
+    /* Verkleinen van de sluitknop */
+    .close-button {
+        font-size: 18px;
+        top: 5px;
+        right: 5px;
+    }
+}
+
+/* Mediaquery voor schermen kleiner dan 520px */
+@media (max-width: 520px) {
+    .popup {
+        width: 380px;
+        height: 200px;
+    }
+
+    h2 {
+        font-size: 36px;
+        margin-top: -20px;
+    }
+
+
+    .other {
+        height: 20px; /* Kleinere invoerveldhoogte */
+    }
+
+}
+
+/* Mediaquery voor schermen kleiner dan 450px */
+@media (max-width: 490px) {
+    .popup {
+        width: 300px;
+        height: 160px;
+    }
+
+    h2 {
+        font-size: 28px; 
+        margin-top: -40px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .amount-options label {
+        font-size: 14px;
+        padding: 5px 10px;
+        width: 60px;
+        height: 12px;
+    }
+
+    .other {
+        height: 18px; 
+        width: 87%;
+    }
+}
+
+/* Mediaquery voor schermen kleiner dan 420px */
+@media (max-width: 420px) {
+    .popup {
+        width: 280px;
+        height: 160px;
+    }
+
+    h2 {
+        font-size: 26px; /* Nog kleinere koptekst */
+        margin-top: -45px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .amount-options label {
+        font-size: 11px;
+    }
+
+    .other {
+        height: 18px; /* Verkleinen van de invoerveldhoogte */
+    }
+}
+
+/* Mediaquery voor schermen kleiner dan 380px */
+@media (max-width: 390px) {
+    .popup {
+        width: 230px;
+        height: 110px;
+    }
+
+    h2 {
+        font-size: 20px; /* Hele kleine koptekst */
+    }
+
+    p {
+        font-size: 12px; /* Kleine tekst voor de paragraaf */
+    }
+
+    .amount-options {
+        justify-content: center;
+    }
+
+    .amount-options label {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .other {
+        height: 10px; /* Verkleinen van het invoerveld */
+        font-size: 10px;
+    }
+}
+
+/* Mediaquery voor schermen kleiner dan 380px */
+@media (max-width: 340px) {
+    .popup {
+        width: 220px;
+        height: 100px;
+    }
+
+    h2 {
+        font-size: 18px; /* Hele kleine koptekst */
+    }
+
+    p {
+        font-size: 11px; /* Kleine tekst voor de paragraaf */
+    }
+
+    .amount-options {
+        justify-content: center;
+    }
+
+    .amount-options label {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+
+    .other {
+        height: 10px; /* Verkleinen van het invoerveld */
+        font-size: 10px;
+    }
+}
+
+/* Popup animatie effect */
+@keyframes popup-zoom {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* Toepassing van animatie aan de popup */
+.popup {
+    animation: popup-zoom 0.6s ease-out, popup-shake 0.3s ease 0.3s;
+}
+
+
+
+
 </style>
